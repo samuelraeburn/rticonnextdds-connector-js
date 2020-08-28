@@ -18,6 +18,7 @@
   "dependencies": {
     "events": "*",
     "ref-napi": "*",
+    "ref-struct-napi": "*",
     "ffi-napi": "*",
     "sleep": "*"
   },
