@@ -17,9 +17,9 @@
   },
   "dependencies": {
     "events": "*",
-    "ref-napi": "*",
-    "ref-struct-napi": "*",
-    "ffi-napi": "*",
+    "ref-napi": "3.0.1",
+    "ref-struct-napi": "1.1.1",
+    "ffi-napi": "3.0.1",
     "sleep": "*"
   },
   "keywords": [
