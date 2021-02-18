@@ -97,6 +97,7 @@ class _ConnectorBinding {
       }
     }
 
+    process.env.PATH = `${process.env.PATH}${path.delimiter}${ path.join(__dirname, '/rticonnextdds-connector/lib/', libDir)}`
     this.library = path.join(__dirname, '/rticonnextdds-connector/lib/', libArch, '/', libName)
     // Obtain FFI'd methods for all of the APIs which we require from the binding,
     // specifying the argument types and return types. If any of the types are
