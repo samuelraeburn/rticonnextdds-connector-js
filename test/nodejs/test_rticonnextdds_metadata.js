@@ -504,8 +504,20 @@ describe('accessing key values after instance disposal', () => {
         // Wait for discovery between the 2 entities
         try {
             let newMatches = await output.waitForSubscriptions(testExpectSuccessTimeout)
+            if (newMatches != 1)
+            {
+                console.log("found ${newMatches} subscriptions (instead of 1)");
+                matches = output.matchedSubscriptions
+                console.log(matches);
+            }
             expect(newMatches).to.deep.equals(1)
             newMatches = await input.waitForPublications(testExpectSuccessTimeout)
+            if (newMatches != 1)
+            {
+                console.log("found ${newMatches} publications (instead of 1)");
+                matches = input.matchedPublications
+                console.log(matches);
+            }
             expect(newMatches).to.deep.equals(1)
         } catch (err) {
             console.log('Caught err: ' + err)
